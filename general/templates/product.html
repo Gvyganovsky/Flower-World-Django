@@ -21,6 +21,7 @@
           <div class="card-header py-3">
             <h4 class="my-0 fw-normal">{{ product.name }}</h4>
           </div>
+<form method="get" action="/product/{{ product.id }}">
           <div class="card-body">
               <img src='{{ product.image.url }}' alt='flower' class="img-fluid w-100">
             <ul class="list-unstyled mt-3 mb-4">
@@ -31,8 +32,9 @@
                 <li>Категория: {{ product.category.name }}</li>
                 <li>Страна: {{ product.country.name }}</li>
             </ul>
-            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Купить</button>
+              <button class="w-100 btn btn-lg btn-outline-primary" type="submit">Купить</button>
           </div>
+                </form>
         </div>
     </div>
 

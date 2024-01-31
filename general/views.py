@@ -12,3 +12,7 @@ def product_page(request, product_id):
     product = Product.objects.get(id=product_id)
 
     return  render(request, 'product.html', context={'product': product})
+
+
+def login(request):
+    return render(request, 'login.html', context={'login': login})
